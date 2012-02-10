@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @item.name %>
+</p>
+
+<p>
+  <b>One hundred:</b>
+  <%= @item.one_hundred %>
+</p>
+
+<p>
+  <b>Item notes:</b>
+  <%= @item.item_notes %>
+</p>
+<p>
+  <b>Shopping suggestions:</b>
+  <%= @item.shopping_suggestions %>
+</p>
+<p>
+  <b>Tags:</b>
+  <%= @item.tags.map { |t| t.name }.join(", ") %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

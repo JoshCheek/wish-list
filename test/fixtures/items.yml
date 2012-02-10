@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  one_hundred: false
+  item_notes: MyText
+  shopping_suggestions: MyString
+
+two:
+  name: MyString
+  one_hundred: false
+  item_notes: MyText
+  shopping_suggestions: MyString
