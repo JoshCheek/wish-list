@@ -1,0 +1,12 @@
+<%= form.fields_for :images do |form| %>
+  <div class="field">
+    <%= form.label :image, 'Image:' %>
+  	<%= form.file_field :image %>
+  </div>
+  <% unless form.object.nil? || form.object.new_record? %>
+    <div class="field">
+      <%= form.label :_destroy, 'Remove:' %>
+      <%= form.check_box :_destroy %>
+    </div>
+  <% end %>
+<% end %>

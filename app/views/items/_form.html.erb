@@ -1,4 +1,6 @@
-<% @item.tags.build %>
+<% @item.tags.build 
+   @item.images.build
+%>
 <%= form_for @item,:html =>{:multipart => true} do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -28,13 +30,15 @@
     <%= f.label :shopping_suggestions %><br />
     <%= f.text_field :shopping_suggestions %>
   </div>
+  
   <h2>Tags</h2>
    <%= render :partial => 'tags/form',
               :locals => {:form => f } %>
-  <p>
-	<%= f.file_field :image %>
-  </p>	
-			
+              
+  <h2>Images</h2>
+   <%= render :partial => 'images/form',
+              :locals => {:form => f } %>            
+              
   <div class="actions">
     <%= f.submit %>
   </div>

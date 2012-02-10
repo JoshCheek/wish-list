@@ -25,7 +25,9 @@
 
 <p>
   <b>Image:</b>
-  <img src="<%= @item.image %>" />
+  <% @item.images.each do |image| %>
+    <img src="<%= image.image %>" />
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
