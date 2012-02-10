@@ -23,6 +23,10 @@
   <%= @item.tags.map { |t| t.name }.join(", ") %>
 </p>
 
+<p>
+  <b>Image:</b>
+  <img src="<%= @item.image %>" />
+</p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
